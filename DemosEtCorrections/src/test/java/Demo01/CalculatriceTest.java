@@ -1,3 +1,5 @@
+package Demo01;
+
 import org.example.Demo01.Calculatrice;
 import org.example.Demo01.DivideByZeroException;
 import org.junit.Assert;
