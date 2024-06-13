@@ -1,9 +1,10 @@
-package Demo01;
+package org.example.Demo01;
 
 import org.example.Demo01.Calculatrice;
 import org.example.Demo01.DivideByZeroException;
-import org.junit.Assert;
-import org.junit.Test;
+// ne pas utiliser les éléments de "import org.junit.*;" => JUnit 4
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class CalculatriceTest {
     private Calculatrice cal;
@@ -20,7 +21,7 @@ public class CalculatriceTest {
         double result = cal.addition(varX, varY);
 
         //Assert
-        Assert.assertEquals(2, result, 0.0001);
+        Assertions.assertEquals(2, result, 0.0001);
     }
 
 
@@ -35,7 +36,7 @@ public class CalculatriceTest {
         double result = cal.division(x,y);
 
         //Assert
-        Assert.assertEquals(3,result,0.01);
+        Assertions.assertEquals(3,result,0.01);
     }
 
     @Test
@@ -46,7 +47,7 @@ public class CalculatriceTest {
         double y = 0;
 
         //Act Arrange
-        Assert.assertThrows(DivideByZeroException.class,()->{cal.division(x,y);});
+        Assertions.assertThrows(DivideByZeroException.class,()->{cal.division(x,y);});
     }
 
 }

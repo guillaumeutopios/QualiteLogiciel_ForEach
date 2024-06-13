@@ -1,8 +1,7 @@
-package Demo03;
+package org.example.Demo03;
 
-import org.example.Demo03.LeapTester;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class LeapTesterTest {
 
@@ -15,7 +14,7 @@ public class LeapTesterTest {
         //Act
         boolean res = leapTester.isLeap(400);
         //Assert
-        Assert.assertTrue(res);
+        Assertions.assertTrue(res);
     }
 
     @Test
@@ -25,7 +24,7 @@ public class LeapTesterTest {
         //Act
         boolean res = leapTester.isLeap(404);
         //Assert
-        Assert.assertTrue(res);
+        Assertions.assertTrue(res);
     }
 
     @Test
@@ -35,7 +34,7 @@ public class LeapTesterTest {
         //Act
         boolean res = leapTester.isLeap(4000);
         //Assert
-        Assert.assertFalse(res);
+        Assertions.assertFalse(res);
     }
 
     @Test
@@ -45,7 +44,7 @@ public class LeapTesterTest {
 
         boolean res = leapTester.isLeap(1999);
 
-        Assert.assertFalse(res);
+        Assertions.assertFalse(res);
     }
 
 }

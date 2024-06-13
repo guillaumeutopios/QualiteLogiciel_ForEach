@@ -1,10 +1,7 @@
-package Demo02;
+package org.example.Demo02;
 
-import org.example.Demo02.De;
-import org.example.Demo02.IDe;
-import org.example.Demo02.Jeu;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 import org.mockito.Mockito;
 
 public class JeuTest {
@@ -19,7 +16,7 @@ public class JeuTest {
 
         boolean result = jeu.jouer();
 
-        Assert.assertTrue(result);
+        Assertions.assertTrue(result);
     }
 
     @Test
@@ -32,7 +29,7 @@ public class JeuTest {
         boolean result = jeu.jouer();
 
         //Assert
-        Assert.assertFalse(result);
+        Assertions.assertFalse(result);
     }
 
 }

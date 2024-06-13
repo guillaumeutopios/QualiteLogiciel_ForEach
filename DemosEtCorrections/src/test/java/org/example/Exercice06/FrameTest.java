@@ -1,10 +1,5 @@
-package Exercice06;
-import jdk.jshell.spi.ExecutionControl;
-import org.example.Exercice06.Frame;
-import org.example.Exercice06.IGenerateur;
-import org.example.Exercice06.Roll;
-import org.junit.Assert;
-import org.junit.Test;
+package org.example.Exercice06;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;

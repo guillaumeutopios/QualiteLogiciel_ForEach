@@ -1,9 +1,9 @@
-package Exercice02;
+package org.example.Exercice02;
 
-import org.example.Exercice02.Fib;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+//import org.junit.Before; // junit 4
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,7 +14,7 @@ public class FibTest {
 
     private Fib fib;
 
-    @Before
+    @BeforeEach
     public void setup (){
         fib = new Fib();
     }
@@ -29,8 +29,8 @@ public class FibTest {
         List<Integer> result = fib.getFibSeries(1);
 
         //Assert
-//        Assert.assertNotEquals(0,result.size());
-        Assert.assertFalse(result.isEmpty());
+//        Assertions.assertNotEquals(0,result.size());
+        Assertions.assertFalse(result.isEmpty());
 
     }
 
@@ -42,7 +42,7 @@ public class FibTest {
         List<Integer> result = fib.getFibSeries(1);
 
         //Assert
-        Assert.assertTrue(result.contains(0));
+        Assertions.assertTrue(result.contains(0));
     }
     //Lors du déclanchement de la fonction GetFibSeries() avec un Range de 6
     //Le résultat contient le chiffre 3
@@ -52,7 +52,7 @@ public class FibTest {
         List<Integer> result = fib.getFibSeries(6);
 
         //Assert
-        Assert.assertTrue(result.contains(3));
+        Assertions.assertTrue(result.contains(3));
     }
 
     //Le résultat contient 6 éléments
@@ -62,7 +62,7 @@ public class FibTest {
         List<Integer> result = fib.getFibSeries(6);
 
         //Assert
-        Assert.assertEquals(6,result.size());
+        Assertions.assertEquals(6,result.size());
     }
     //Le résultat n’a pas le chiffre 4 en son sein
     @Test
@@ -71,7 +71,7 @@ public class FibTest {
         List<Integer> result = fib.getFibSeries(6);
 
         //Assert
-        Assert.assertFalse(result.contains(4));
+        Assertions.assertFalse(result.contains(4));
     }
     //Le résultat correspond à une liste qui contient {0, 1, 1, 2, 3, 5}
     @Test
@@ -83,7 +83,7 @@ public class FibTest {
         List<Integer> result = fib.getFibSeries(6);
 
         //Assert
-        Assert.assertTrue(result.containsAll(expected));
+        Assertions.assertTrue(result.containsAll(expected));
     }
     //Le résultat est trié de façon ascendance
     @Test
@@ -95,6 +95,6 @@ public class FibTest {
         List<Integer> expected = result.stream().sorted().toList();
 
         //Assert
-        Assert.assertArrayEquals(expected.toArray(),result.toArray());
+        Assertions.assertArrayEquals(expected.toArray(),result.toArray());
     }
 }

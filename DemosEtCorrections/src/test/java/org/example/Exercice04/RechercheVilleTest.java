@@ -1,11 +1,9 @@
-package Exercice04;
+package org.example.Exercice04;
 
 import jdk.jshell.spi.ExecutionControl;
-import org.example.Exercice04.RechercheVille;
-import org.example.Exercice04.NotFoundException;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -16,7 +14,7 @@ public class RechercheVilleTest {
 
     private List<String> villes = Arrays.asList(new String[] {"Paris","Budapest","Skopje","Valence","Vancouver","Amsterdam","Sydney","Londres"});
 
-    @Before
+    @BeforeEach
     public void setUp (){
         rechercheVille = new RechercheVille(villes);
     }
@@ -27,7 +25,7 @@ public class RechercheVilleTest {
         String myChar = "v";
 
         //Act Assert
-        Assert.assertThrows(NotFoundException.class,()->{
+        Assertions.assertThrows(NotFoundException.class,()->{
             rechercheVille.recherche(myChar);
         });
     }
@@ -42,7 +40,7 @@ public class RechercheVilleTest {
         List<String> result = rechercheVille.recherche(mySearch);
 
         //Assert
-        Assert.assertArrayEquals(expected,result.toArray());
+        Assertions.assertArrayEquals(expected,result.toArray());
     }
 
     @Test
@@ -55,7 +53,7 @@ public class RechercheVilleTest {
         List<String> result = rechercheVille.recherche(mySearch);
 
         //Assert
-        Assert.assertArrayEquals(expected,result.toArray());
+        Assertions.assertArrayEquals(expected,result.toArray());
     }
 
     @Test
@@ -68,7 +66,7 @@ public class RechercheVilleTest {
         List<String> result = rechercheVille.recherche(mySearch);
 
         //Assert
-        Assert.assertArrayEquals(expected,result.toArray());
+        Assertions.assertArrayEquals(expected,result.toArray());
     }
 
     @Test
@@ -79,7 +77,7 @@ public class RechercheVilleTest {
         //Act
         List<String> result = rechercheVille.recherche(mySearch);
 
-        Assert.assertArrayEquals(villes.toArray(),result.toArray());
+        Assertions.assertArrayEquals(villes.toArray(),result.toArray());
     }
 
 }

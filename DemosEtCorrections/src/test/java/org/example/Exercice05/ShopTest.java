@@ -1,16 +1,14 @@
-package Exercice05;
+package org.example.Exercice05;
 import jdk.jshell.spi.ExecutionControl;
-import org.example.Exercice05.Product;
-import org.example.Exercice05.Shop;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class ShopTest {
 
     private Shop shop;
 
-    @Before
+    @BeforeEach
     public void setUp(){
         shop = new Shop();
     }
@@ -24,7 +22,7 @@ public class ShopTest {
         shop.update(product);
 
         //Assert
-        Assert.assertEquals(9,product.getSellIn());
+        Assertions.assertEquals(9,product.getSellIn());
     }
 
     @Test
@@ -36,7 +34,7 @@ public class ShopTest {
         shop.update(product);
 
         //Assert
-        Assert.assertEquals(9,product.getQuality());
+        Assertions.assertEquals(9,product.getQuality());
     }
 
     @Test
@@ -48,7 +46,7 @@ public class ShopTest {
         shop.update(product);
 
         //Assert
-        Assert.assertEquals(8,product.getQuality());
+        Assertions.assertEquals(8,product.getQuality());
     }
 
     @Test
@@ -60,7 +58,7 @@ public class ShopTest {
         shop.update(product);
 
         //Assert
-        Assert.assertEquals(0,product.getQuality());
+        Assertions.assertEquals(0,product.getQuality());
     }
 
     @Test
@@ -72,7 +70,7 @@ public class ShopTest {
         shop.update(product);
 
         //Assert
-        Assert.assertEquals(11,product.getQuality());
+        Assertions.assertEquals(11,product.getQuality());
     }
 
     @Test
@@ -84,7 +82,7 @@ public class ShopTest {
         shop.update(product);
 
         //Assert
-        Assert.assertEquals(50,product.getQuality());
+        Assertions.assertEquals(50,product.getQuality());
     }
 
     @Test
@@ -96,7 +94,7 @@ public class ShopTest {
         shop.update(product);
 
         //Assert
-        Assert.assertEquals(8,product.getQuality());
+        Assertions.assertEquals(8,product.getQuality());
     }
 
     @Test
@@ -108,7 +106,7 @@ public class ShopTest {
         shop.update(product);
 
         //Assert
-        Assert.assertEquals(6,product.getQuality());
+        Assertions.assertEquals(6,product.getQuality());
     }
 
 }

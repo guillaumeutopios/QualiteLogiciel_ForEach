@@ -1,9 +1,7 @@
-package Exercice03Mock;
+package org.example.Exercice03Mock;
 
-import org.example.Exercice03Mock.DiceScore;
-import org.example.Exercice03Mock.IDe;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 public class DiceScoreTest {
@@ -21,7 +19,7 @@ public class DiceScoreTest {
         int result = diceScore.getScore();
 
         //Assert
-        Assert.assertEquals(20,result);
+        Assertions.assertEquals(20,result);
     }
 
     @Test
@@ -34,7 +32,7 @@ public class DiceScoreTest {
         int result = diceScore.getScore();
 
         //Assert
-        Assert.assertEquals(30,result);
+        Assertions.assertEquals(30,result);
     }
 
     @Test
@@ -48,7 +46,7 @@ public class DiceScoreTest {
         int result = diceScore.getScore();
 
         //Assert
-        Assert.assertEquals(6,result);
+        Assertions.assertEquals(6,result);
     }
 
     @Test
@@ -61,6 +59,6 @@ public class DiceScoreTest {
         int result = diceScore.getScore();
 
         //Assert
-        Assert.assertEquals(5,result);
+        Assertions.assertEquals(5,result);
     }
 }
